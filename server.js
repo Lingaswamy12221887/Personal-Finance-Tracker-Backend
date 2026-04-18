@@ -258,6 +258,9 @@ app.post('/api/send-budget-alert', async (req, res) => {
 
   res.json({ success: results.email.success || results.sms.success, results });
 });
+app.get('/', (req, res) => {
+  res.json({ message: 'Finance Tracker API is running 🚀' });
+});
 
 // ── START ────────────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
